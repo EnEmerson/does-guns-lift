@@ -17,7 +17,7 @@ namespace doesGunsEvenLift
         Stream myStream = null;
         string directory = "No file selected.";
         List<Double> liftRepsList = new List<Double>();
-        int liftThreshold = 4500;
+        int liftThreshold = 4550;
 
         public Form1()
         {
