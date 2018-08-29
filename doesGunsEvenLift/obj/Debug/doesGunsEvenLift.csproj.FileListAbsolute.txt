@@ -16,3 +16,13 @@ C:\Users\En\Desktop\repos\Personal\does-guns-lift\doesGunsEvenLift\obj\Debug\doe
 C:\Users\En\Desktop\repos\Personal\does-guns-lift\doesGunsEvenLift\obj\Debug\doesGunsEvenLift.Form1.resources
 C:\Users\En\Desktop\repos\Personal\does-guns-lift\doesGunsEvenLift\obj\Debug\doesGunsEvenLift.Properties.Resources.resources
 C:\Users\En\Desktop\repos\Personal\does-guns-lift\doesGunsEvenLift\obj\Debug\doesGunsEvenLift.csproj.GenerateResource.Cache
+C:\Users\Lord_\Desktop\Repositories\does-guns-lift\doesGunsEvenLift\bin\Debug\doesGunsEvenLift.exe.config
+C:\Users\Lord_\Desktop\Repositories\does-guns-lift\doesGunsEvenLift\bin\Debug\doesGunsEvenLift.exe
+C:\Users\Lord_\Desktop\Repositories\does-guns-lift\doesGunsEvenLift\bin\Debug\doesGunsEvenLift.pdb
+C:\Users\Lord_\Desktop\Repositories\does-guns-lift\doesGunsEvenLift\obj\Debug\doesGunsEvenLift.csprojAssemblyReference.cache
+C:\Users\Lord_\Desktop\Repositories\does-guns-lift\doesGunsEvenLift\obj\Debug\doesGunsEvenLift.Form1.resources
+C:\Users\Lord_\Desktop\Repositories\does-guns-lift\doesGunsEvenLift\obj\Debug\doesGunsEvenLift.Properties.Resources.resources
+C:\Users\Lord_\Desktop\Repositories\does-guns-lift\doesGunsEvenLift\obj\Debug\doesGunsEvenLift.csproj.GenerateResource.cache
+C:\Users\Lord_\Desktop\Repositories\does-guns-lift\doesGunsEvenLift\obj\Debug\doesGunsEvenLift.csproj.CoreCompileInputs.cache
+C:\Users\Lord_\Desktop\Repositories\does-guns-lift\doesGunsEvenLift\obj\Debug\doesGunsEvenLift.exe
+C:\Users\Lord_\Desktop\Repositories\does-guns-lift\doesGunsEvenLift\obj\Debug\doesGunsEvenLift.pdb

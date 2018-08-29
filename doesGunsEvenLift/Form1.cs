@@ -18,12 +18,36 @@ namespace doesGunsEvenLift
         string directory = "No file selected.";
         List<Double> liftRepsList = new List<Double>();
         int liftThreshold = 4550;
+        const int reps = 5000;
 
         public Form1()
         {
             InitializeComponent();
             filePathBox.Text = directory;
             threshLabel.Text = "Lift Threshold: " + liftThreshold.ToString();
+
+            // im just testing this method right now
+
+            generateRandomSet();
+        }
+
+        private void generateRandomSet()
+        {
+            List<int> repsList = new List<int>();
+            Random foo = new Random();
+
+            for (int i = 0; i < reps; i++)
+            {
+                int bar = foo.Next(1,10001); // rand generation format is (inc, exc)
+                repsList.Add(bar);
+            }
+
+            // this next section is just testing to see if the list is filled with ints
+            // will be deleted later
+            for(int j = 0; j < repsList.Count(); j++)
+            {
+                Console.WriteLine("This is index " + j + ": " + repsList[j].ToString()); // this line is broken :(
+            }
         }
 
         private void selectFileButton_Click(object sender, EventArgs e)
