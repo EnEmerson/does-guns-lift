@@ -40,5 +40,13 @@ else
 }
 ```
 
+---
+
+I've recently added the ability to generate a random set of 5000 reps, this currently compares against the same 'lift threshold' as the default test set that I created. Here's what the form window looks like as of now:
+
+![form-window](https://github.com/EnEmerson/does-guns-lift/blob/master/resources/form-window.png)
+
+---
+
 ## Keep lifting brotha.
 ![guns-dialog-box](https://github.com/EnEmerson/does-guns-lift/blob/master/resources/guns-dialog-box.png)
