@@ -16,19 +16,15 @@ namespace doesGunsEvenLift
     {
         Stream myStream = null;
         string directory = "No file selected.";
-        List<Double> liftRepsList = new List<Double>();
-        int liftThreshold = 4550;
-        const int reps = 5000;
+        List<int> liftRepsList = new List<int>();
+        const int LIFT_THRESHOLD = 4550;
+        const int REPS = 5000;
 
         public Form1()
         {
             InitializeComponent();
             filePathBox.Text = directory;
-            threshLabel.Text = "Lift Threshold: " + liftThreshold.ToString();
-
-            // im just testing this method right now
-
-            generateRandomSet();
+            threshLabel.Text = "Lift Threshold: " + LIFT_THRESHOLD.ToString();
         }
 
         private void generateRandomSet()
@@ -36,23 +32,17 @@ namespace doesGunsEvenLift
             List<int> repsList = new List<int>();
             Random foo = new Random();
 
-            for (int i = 0; i < reps; i++)
+            for (int i = 0; i < REPS; i++)
             {
-                int bar = foo.Next(1,10001); // rand generation format is (inc, exc)
+                int bar = foo.Next(1,10001);
                 repsList.Add(bar);
             }
-
-            // this next section is just testing to see if the list is filled with ints
-            // will be deleted later
-            for(int j = 0; j < repsList.Count(); j++)
-            {
-                Console.WriteLine("This is index " + j + ": " + repsList[j].ToString()); // this line is broken :(
-            }
+            directory = "Trying a random set...";
+            getLifts(repsList);
         }
 
         private void selectFileButton_Click(object sender, EventArgs e)
         {
-            
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
 
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
@@ -77,18 +67,19 @@ namespace doesGunsEvenLift
 
         public void getLifts()
         {
+            clearList();
+
             StreamReader sr = new StreamReader(directory);
             filePathBox.Text = directory.ToString();
 
             try
             {
-                double current;
+                int current;
                 string foo;
                 while ((foo = sr.ReadLine()) != null)
                 {
-                    current = Convert.ToDouble(foo);
+                    current = Int32.Parse(foo);
                     liftRepsList.Add(current);
-                    Console.WriteLine(current);
                 }
             }
             catch (Exception ex)
@@ -98,12 +89,26 @@ namespace doesGunsEvenLift
 
         }
 
-        private void calcButton_Click(object sender, EventArgs e)
+        public void getLifts(List<int> tempLifts)
+        {
+            clearList();
+            filePathBox.Text = directory.ToString();
+            foreach (int i in tempLifts)
+            {
+                liftRepsList.Add(i);
+            }
+        }
+
+        public void clearList()
+        {
+            liftRepsList.Clear();
+        }
+        private void calculateTheLifts()
         {
             if (directory != "No file selected.")
             {
                 numOfLiftsBox.Text = liftRepsList.Count().ToString(); // number of lifts in the set
-                
+
                 double divisor = 0;
                 double dividend = liftRepsList.Count();
                 int avgLifts = 0;
@@ -118,7 +123,7 @@ namespace doesGunsEvenLift
 
                 avgOfLiftsBox.Text = avgLifts.ToString(); // average number of lifts
 
-                if (avgLifts < liftThreshold) //result of lift or not to lift
+                if (avgLifts < LIFT_THRESHOLD) //result of lift or not to lift
                 {
                     resultBox.Text = "'The Guns' doesn't lift.";
                 }
@@ -135,6 +140,16 @@ namespace doesGunsEvenLift
                 avgOfLiftsBox.Clear();
                 resultBox.Clear();
             }
+        }
+        private void calcButton_Click(object sender, EventArgs e)
+        {
+            calculateTheLifts();
+        }
+
+        private void randSetButton_Click(object sender, EventArgs e)
+        {
+            generateRandomSet();
+            calculateTheLifts();
         }
     }
 }
