@@ -30,7 +30,7 @@ Therefore, the average rep 'The Guns' should be on when I run past him is aproxi
 #### Code snippet:
 
 ```C#
-if (avgLifts < liftThreshold) //result of lift or not to lift
+if (avgLifts < liftThreshold) // whether 'The Guns' lifts or not
 {
 	resultBox.Text = "'The Guns' doesn't lift.";
 }
@@ -39,6 +39,8 @@ else
 	resultBox.Text = "'The Guns' lifts.";
 }
 ```
+
+[See the full code for the app here.](https://github.com/EnEmerson/does-guns-lift/blob/master/doesGunsEvenLift/Form1.cs)
 
 ---
 
