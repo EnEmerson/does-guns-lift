@@ -25,17 +25,19 @@ namespace doesGunsEvenLift
             InitializeComponent();
             filePathBox.Text = directory;
             threshLabel.Text = "Lift Threshold: " + LIFT_THRESHOLD.ToString();
+            randSetButton.Text = "Create a random set of " + REPS.ToString() + " reps and test";
         }
 
         private void generateRandomSet()
         {
             List<int> repsList = new List<int>();
-            Random foo = new Random();
+            Random repGenerator = new Random();
+            int upperBound = 9101;
 
             for (int i = 0; i < REPS; i++)
             {
-                int bar = foo.Next(1,10001);
-                repsList.Add(bar);
+                int randRep = repGenerator.Next(1,upperBound);
+                repsList.Add(randRep);
             }
             directory = "Trying a random set...";
             getLifts(repsList);
@@ -65,7 +67,7 @@ namespace doesGunsEvenLift
             }
         }
 
-        public void getLifts()
+        public void getLifts() 
         {
             clearList();
 
@@ -92,6 +94,7 @@ namespace doesGunsEvenLift
         public void getLifts(List<int> tempLifts)
         {
             clearList();
+
             filePathBox.Text = directory.ToString();
             foreach (int i in tempLifts)
             {
@@ -103,47 +106,49 @@ namespace doesGunsEvenLift
         {
             liftRepsList.Clear();
         }
+
         private void calculateTheLifts()
+        {
+            numOfLiftsBox.Text = liftRepsList.Count().ToString(); // number of lifts in the set
+
+            double divisor = 0;
+            double dividend = liftRepsList.Count();
+            int avgLifts = 0;
+            int count = liftRepsList.Count();
+
+            for (int i = 0; i < count; i++)
+            {
+                divisor += liftRepsList.ElementAt(i);
+            }
+
+            avgLifts = (int)(divisor / dividend);
+
+            avgOfLiftsBox.Text = avgLifts.ToString(); // average number of lifts
+
+            if (avgLifts < LIFT_THRESHOLD) // whether 'The Guns' lifts or not
+            {
+                resultBox.Text = "'The Guns' doesn't lift.";
+            }
+            else
+            {
+                resultBox.Text = "'The Guns' lifts.";
+            }
+            
+        }
+        private void calcButton_Click(object sender, EventArgs e)
         {
             if (directory != "No file selected.")
             {
-                numOfLiftsBox.Text = liftRepsList.Count().ToString(); // number of lifts in the set
-
-                double divisor = 0;
-                double dividend = liftRepsList.Count();
-                int avgLifts = 0;
-                int count = liftRepsList.Count();
-
-                for (int i = 0; i < count; i++)
-                {
-                    divisor += liftRepsList.ElementAt(i);
-                }
-
-                avgLifts = (int)(divisor / dividend);
-
-                avgOfLiftsBox.Text = avgLifts.ToString(); // average number of lifts
-
-                if (avgLifts < LIFT_THRESHOLD) //result of lift or not to lift
-                {
-                    resultBox.Text = "'The Guns' doesn't lift.";
-                }
-                else
-                {
-                    resultBox.Text = "'The Guns' lifts.";
-                }
+                calculateTheLifts();
             }
             else
             {
                 MessageBox.Show("Please select a directory.");
-                filePathBox.Text = "Please select a directory";
+                filePathBox.Text = "Please select a directory...";
                 numOfLiftsBox.Clear();
                 avgOfLiftsBox.Clear();
                 resultBox.Clear();
             }
-        }
-        private void calcButton_Click(object sender, EventArgs e)
-        {
-            calculateTheLifts();
         }
 
         private void randSetButton_Click(object sender, EventArgs e)
