@@ -43,7 +43,7 @@
             // 
             // selectFileButton
             // 
-            this.selectFileButton.Location = new System.Drawing.Point(18, 18);
+            this.selectFileButton.Location = new System.Drawing.Point(39, 24);
             this.selectFileButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.selectFileButton.Name = "selectFileButton";
             this.selectFileButton.Size = new System.Drawing.Size(112, 35);
@@ -54,17 +54,17 @@
             // 
             // filePathBox
             // 
-            this.filePathBox.Location = new System.Drawing.Point(184, 22);
+            this.filePathBox.Location = new System.Drawing.Point(210, 24);
             this.filePathBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.filePathBox.Name = "filePathBox";
             this.filePathBox.ReadOnly = true;
-            this.filePathBox.Size = new System.Drawing.Size(384, 26);
+            this.filePathBox.Size = new System.Drawing.Size(358, 26);
             this.filePathBox.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(308, 254);
+            this.label1.Location = new System.Drawing.Point(309, 259);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 20);
@@ -74,7 +74,7 @@
             // 
             // resultBox
             // 
-            this.resultBox.Location = new System.Drawing.Point(376, 249);
+            this.resultBox.Location = new System.Drawing.Point(376, 253);
             this.resultBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.resultBox.Name = "resultBox";
             this.resultBox.ReadOnly = true;
@@ -94,7 +94,7 @@
             // 
             // numOfLiftsBox
             // 
-            this.numOfLiftsBox.Location = new System.Drawing.Point(376, 92);
+            this.numOfLiftsBox.Location = new System.Drawing.Point(376, 96);
             this.numOfLiftsBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.numOfLiftsBox.Name = "numOfLiftsBox";
             this.numOfLiftsBox.ReadOnly = true;
@@ -104,7 +104,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(284, 97);
+            this.label2.Location = new System.Drawing.Point(286, 96);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 20);
@@ -114,7 +114,7 @@
             // 
             // avgOfLiftsBox
             // 
-            this.avgOfLiftsBox.Location = new System.Drawing.Point(376, 169);
+            this.avgOfLiftsBox.Location = new System.Drawing.Point(376, 173);
             this.avgOfLiftsBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.avgOfLiftsBox.Name = "avgOfLiftsBox";
             this.avgOfLiftsBox.ReadOnly = true;
@@ -124,7 +124,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(260, 174);
+            this.label3.Location = new System.Drawing.Point(262, 176);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(106, 20);
@@ -135,17 +135,17 @@
             // threshLabel
             // 
             this.threshLabel.AutoSize = true;
-            this.threshLabel.Location = new System.Drawing.Point(18, 260);
+            this.threshLabel.Location = new System.Drawing.Point(259, 333);
             this.threshLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.threshLabel.Name = "threshLabel";
-            this.threshLabel.Size = new System.Drawing.Size(75, 20);
+            this.threshLabel.Size = new System.Drawing.Size(109, 20);
             this.threshLabel.TabIndex = 9;
-            this.threshLabel.Text = "threshold";
+            this.threshLabel.Text = "Lift Threshold:";
             this.threshLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // randSetButton
             // 
-            this.randSetButton.Location = new System.Drawing.Point(39, 314);
+            this.randSetButton.Location = new System.Drawing.Point(39, 238);
             this.randSetButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.randSetButton.Name = "randSetButton";
             this.randSetButton.Size = new System.Drawing.Size(171, 115);
@@ -158,7 +158,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(588, 460);
+            this.ClientSize = new System.Drawing.Size(588, 407);
             this.Controls.Add(this.randSetButton);
             this.Controls.Add(this.threshLabel);
             this.Controls.Add(this.avgOfLiftsBox);
